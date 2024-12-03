@@ -1,0 +1,46 @@
+p,
+div,
+span {
+  font-family: "Lucida Calligraphy";
+}
+
+#header > h1 {
+  text-align: center;
+}
+
+.none-bullet-list {
+  list-style-type: none;
+}
+
+li a {
+  color: red;
+  background-color: pink;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: pink;
+  background-color: red;
+}
+
+h2 + p {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#loginform {
+  border: 2px dashed black;
+}
+input[type="text"] {
+  background-color: yellow;
+}
+
+input[type="text"]:focus {
+  background-color: white;
+}
+
+#title p {
+  border: 3px solid;
+  display: inline;
+  float: left;
+}
