@@ -1,0 +1,64 @@
+body {
+  margin: 0 !important;
+  font-family: "Lucida Calligraphy";
+}
+.navdiv {
+  background-color: aqua;
+  display: inline-block;
+  width: 100%;
+  position: fixed;
+}
+
+ul .navli {
+  display: inline;
+}
+
+#header {
+  text-align: center;
+  padding: 10px;
+}
+ul {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: red;
+  background-color: pink;
+}
+li a:hover {
+  color: pink;
+  background-color: red;
+}
+
+span > p {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#loginform {
+  border: 2px dashed rgb(20, 70, 60);
+}
+
+input[type="text"] {
+  background-color: yellow;
+}
+
+input[type="text"]:focus {
+  background-color: white;
+}
+
+.tabled-bordered {
+  display: table-cell;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+span > p::after {
+  content: "Read this";
+  color: yellow;
+}
+
+#aboutus {
+  color: yellow;
+}
