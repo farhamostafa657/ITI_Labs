@@ -1,0 +1,31 @@
+.navbar_div {
+  background-color: black;
+  padding: 5px;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+.navbarlist {
+  list-style: none;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: white;
+  float: left;
+  padding: 3px;
+}
+
+.nav_link:hover {
+  background-color: rgb(32, 176, 48);
+  padding: 20px;
+}
+
+.navbarli {
+  display: inline-block;
+}
+.par_style {
+  clear: left;
+}

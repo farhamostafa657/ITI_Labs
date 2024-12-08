@@ -1,0 +1,32 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  background-color: black;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 20px 0;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:active {
+  background-color: green; /* Highlight for the active link */
+}
+
+.content {
+  padding: 20px;
+  height: 2000px; /* For scrolling demonstration */
+  background-color: #f4f4f4;
+}
