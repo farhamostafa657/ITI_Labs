@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="randomTip"></p>
+
+    <p id="demo"></p>
+
+    <button onclick="handleDate()">Current Date</button>
+    <br />
+    <br />
+    <label for="country_code">enter full name</label>
+    <input
+      type="text"
+      id="country_code"
+      name="country_code"
+      pattern="[A-Za-z]{3,}(?: [A-Za-z]{3,})*"
+    /><br /><br />
+    <input type="submit" />
+
+    <script src="./script.js"></script>
+  </body>
+</html>
