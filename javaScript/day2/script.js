@@ -105,20 +105,71 @@ const students = [
   { studentName: "abdo", degree: 55 },
   { studentName: "abdla", degree: 50 },
 ];
-/////
+/////a
+//find function
 const highName = students.find(
   (student) => student.degree >= 90 && student.degree <= 100
 );
 console.log("High degree:", highName.studentName);
-/////
+/////b
+//filter function to show less than 60
 const degreeless60 = students.filter((student) => student.degree < 60);
 
 console.log(
   "student less than 60",
   degreeless60.map((student) => student.degree)
 );
-////
-
+////c
+//push element to the array
 students.push({ studentName: "reem", degree: 98 });
+for (let x in students) {
+  console.log(students[x]);
+}
+///d
+//pop element from array
+students.pop();
+for (let x of Object.values(students)) {
+  console.log("using for of", x);
+}
 
-for
+///e
+//using local compare function
+students.sort((a, b) => a.studentName.localeCompare(b.studentName));
+console.log(students);
+///f
+//using splice function
+students.splice(
+  1,
+  0,
+  { studentName: "ahmed", degree: 60 },
+  { studentName: "ali", degree: 99 }
+);
+console.log("usin splice", students);
+/////g
+students.splice(3, 2);
+console.log("usin splice to remove forth element", students);
+///////////////////////////////////////////////////
+//8
+
+function BdayFormat() {
+  const userInput = document.getElementById("birthDate").value;
+
+  if (
+    userInput.length === 10 &&
+    userInput.charAt(2) === "-" &&
+    userInput.charAt(5) === "-" &&
+    !isNaN(userInput.substring(0, 2)) &&
+    !isNaN(userInput.substring(3, 5)) &&
+    !isNaN(userInput.substring(6))
+  ) {
+    let day = Number(userInput.substring(0, 2));
+    let month = Number(userInput.substring(3, 5));
+    let year = Number(userInput.substring(6, 10));
+    let date = new Date(year, month, day);
+    alert(date.toDateString());
+  } else {
+    window.alert("wrong date format");
+  }
+}
+
+///////////////////////////////////////////////////////////////

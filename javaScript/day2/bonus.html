@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <!-- take number from user -->
+      <label for="num">Enter your number</label>
+      <input type="text" name="num" id="num" />
+      <br />
+      <button onclick="handleNubmer()">submet</button>
+      <br />
+      <!-- birth date of user -->
+      <label for="">enter your birthDate</label>
+      <br />
+      <input type="text" id="birthDate" placeholder="DD-MM-YYYY" />
+      <br />
+      <!-- show the age of the user -->
+      <button onclick="age()">ShowAge</button>
+      <br />
+      <br />
+      <!-- user choose color -->
+      <label for=""
+        >choose the color you want to use to display ((r) red, (b) blue, (g)
+        green)
+      </label>
+      <br />
+      <input type="text" id="cColor" placeholder="ex: r" />
+      <br />
+      <br />
+      <button onclick="getColor()">Done</button>
+      <br />
+      <!-- display user date in matched coor -->
+      <p id="parag"></p>
+      <span id="color_birth"> </span>
+    </div>
+    <script src="./bonus.js"></script>
+  </body>
+</html>
