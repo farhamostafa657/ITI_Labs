@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page</title>
+  </head>
+  <body>
+    <!-- textBox -->
+    <div>
+      <input
+        type="text"
+        onkeydown="char(event)"
+        id="textB"
+        onmousedown="mouseDown(event)"
+      />
+    </div>
+
+    <br />
+    <br />
+    <!-- button start clock -->
+    <div>
+      <button onclick="clockStarted()" id="lessen" onkeydown="altW(event)">
+        Start Clock
+      </button>
+    </div>
+    <div id="timeUpdated"></div>
+
+    <!-- link advertising window -->
+    <a href="#" onclick="advertic() " id="myId">Advertice</a>
+    <br />
+    <a href="#" onclick="closer() " id="myId2">close</a>
+    <br />
+    <!-- check box to agree terms -->
+
+    <input type="checkbox" />
+    <a href="#" id="terms"
+      ><label for="">I agree to terms and condition</label>
+    </a>
+    <br />
+    <br />
+    <!-- label for first name -->
+    <label for="firstName">First Name:</label>
+    <input
+      onkeydown="prevent(event)"
+      type="text"
+      id="firstName"
+      placeholder="Enter your first name"
+    />
+
+    <script src="./script.js"></script>
+  </body>
+</html>

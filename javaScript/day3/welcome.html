@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <p>welcome <strong id="name" style="font-size: larger"></strong></p>
+    <script>
+      ///////////////////////////////////////3
+      const url = location.search;
+      console.log(url);
+      const urlArray = url.split("&");
+      const name = urlArray[0].substring(11);
+      document.getElementById("name").innerHTML = name;
+      console.log(urlArray[0]);
+    </script>
+  </body>
+</html>
