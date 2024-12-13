@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>welcome</title>
+  </head>
+  <body>
+    <p style="text-align: center; color: cadetblue">
+      thank you
+      <strong id="name" style="font-size: larger"></strong> registering in our
+      website
+    </p>
+    <script>
+      ///////////////////////////////////////3
+      const url = location.search;
+      console.log(url);
+      const urlArray = url.split("&");
+      const name = urlArray[0].substring(11);
+      document.getElementById("name").innerHTML = name;
+      console.log(urlArray[0]);
+    </script>
+  </body>
+</html>
