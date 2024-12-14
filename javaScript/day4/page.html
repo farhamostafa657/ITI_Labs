@@ -4,6 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day 4</title>
+    <style>
+      input:invalid {
+        border: 2px solid red;
+        background-color: beige;
+      }
+      input:valid {
+        background-color: beige;
+        border: 2px solid green;
+      }
+      .show {
+        width: 100px;
+        height: 100px;
+        border: 8px solid black;
+      }
+    </style>
   </head>
   <body>
     <form action="welcome.html" method="get">
@@ -14,9 +29,13 @@
         name="full_name"
         id="name"
         placeholder="Enter your Name:"
-        onblur="vaildation(this)"
-        onmouseout="checkValid(this)"
-      /><span style="color: red; text-decoration: solid"></span>
+        onblur="validation(this)"
+      /><span
+        id="imgValid"
+        style="color: red; text-decoration: solid; margin: 10px"
+      ></span>
+      <br />
+      <span id="imgValid"></span>
       <br />
       <br />
       <label for=""> Email </label>
@@ -40,8 +59,10 @@
         type="password"
         name="repeatPass"
         id="reppass"
-        onblur=" validatPass(this)"
+        onblur="validationpass(this)"
       />
+      <span id="validPass" style="color: red; text-decoration: solid"></span>
+      <span id="imgValidPass"></span>
       <br />
       <br />
       <input type="checkbox" /><label for=""
@@ -49,10 +70,63 @@
       >
       <br />
       <br />
-      <input type="submit" value="Register " id="butt" />
+      <button id="register" onclick="check(event)">Register</button>
+      <span style="color: red; text-decoration: solid"></span>
       <br />
       <br />
     </form>
+    <div>
+      <label for="">Photo gallery</label>
+      <br />
+      <img
+        id="galleryImg"
+        onmouseenter="playImg()"
+        onmouseout="stopImg()"
+        src="./Images For Slide Show/1.jpg"
+        alt=""
+      />
+      <br />
+      <button onclick="playImg()">Play</button>
+
+      <button onclick="stopImg()">Stop</button>
+      <button onclick="nextImg()">next</button>
+      <button onclick="prevImg()">Previos</button>
+    </div>
+
+    <div></div>
+    <br />
+    <div style="float: left; margin: 0; border: 8px solid black; display: flex">
+      <img
+        class="show"
+        onmouseenter="changOpacity(this)"
+        onmouseout="opacityOne(this)"
+        src="./Images For Slide Show/1.jpg"
+        alt=""
+      />
+      <img
+        class="show"
+        onmouseenter="changOpacity(this)"
+        onmouseout="opacityOne(this)"
+        src="./Images For Slide Show/2.jpg"
+        alt=""
+      />
+      <img
+        class="show"
+        onmouseenter="changOpacity(this)"
+        onmouseout="opacityOne(this)"
+        src="./Images For Slide Show/3.jpg"
+        alt=""
+      />
+      <img
+        class="show"
+        onmouseenter="changOpacity(this)"
+        onmouseout="opacityOne(this)"
+        src="./Images For Slide Show/4.jpg"
+        alt=""
+      />
+      <br />
+      <br />
+    </div>
 
     <script src="./script.js"></script>
   </body>
