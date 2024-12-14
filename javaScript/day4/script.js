@@ -214,3 +214,12 @@ function opacityOne(ele) {
   clearInterval(intervalOpc);
   ele.style.opacity = 1;
 }
+///////////////////////////////////////////////////////
+//7
+const divDom = document.getElementById("dom");
+const imgCreat = document.createElement("img");
+imgCreat.setAttribute("src", "./Images For Slide Show/1.jpg");
+//using append child
+//document.getElementById("dom").appendChild(imgCreat);
+//using insert before
+document.getElementById("dom").insertBefore(imgCreat, divDom.children[0]);
