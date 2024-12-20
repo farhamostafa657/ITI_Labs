@@ -1,0 +1,133 @@
+/* 1-	Make a div with Curved borders. */
+#Curved_borders {
+  border: 2px solid red;
+  border-radius: 25px;
+  width: 200px;
+  height: 200px;
+}
+/* 2-	Use Custom font for any paragraph. */
+@font-face {
+  font-family: CustomFont;
+  src: url("./fonts/ge_ss_two_medium.eot") url(./fonts//ge_ss_two_medium.ttf);
+}
+
+p {
+  font-family: CustomFont, "san-serif";
+}
+/* 3-	Use CSS3 columns on any paragraph. */
+#columns {
+  columns: 100px 3;
+}
+/* 4-	Make a div and write your name on it
+, and make it appears vertical on the page and 
+with the page height (use transformation). */
+#transformation {
+  transform: rotate(-90deg);
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+}
+/* 5-	Use transition on an image on the page, that make it rotates and its width and height increase on hover. */
+#transition_pro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid;
+  margin: 20px;
+  width: 400px;
+  height: 400px;
+}
+#transition_pro img {
+  width: 200px;
+  height: 100px;
+  transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
+}
+
+#transition_pro img:hover {
+  transform: rotate(360deg);
+  width: 300px;
+  height: 200px;
+}
+/* 6-	Use animation using keyframe on another image,
+ to make it rotates around its center, and moves from 
+ left to right, while its width and height increases. */
+#animation_pro {
+  border: 2px solid;
+  margin: 20px;
+  width: 100%;
+  height: 400px;
+}
+
+#animation_pro img {
+  position: absolute;
+  transform: rotate(180deg);
+  animation: rotateAndMove 5s infinite;
+}
+
+@keyframes rotateAndMove {
+  0% {
+    transform: rotate(0deg);
+    left: 0;
+    width: 100px;
+    height: 100px;
+  }
+  50% {
+    transform: rotate(180deg);
+    left: 50%;
+    width: 150px;
+    height: 150px;
+  }
+  100% {
+    transform: rotate(360deg);
+    width: 200px;
+    height: 200px;
+  }
+}
+
+#left_hover {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin: 20px;
+  border: 2px solid;
+}
+#left_hover img {
+  position: relative;
+  left: 0;
+
+  transition: 3s;
+}
+
+#left_hover:hover img {
+  transform: scaleX(-1);
+  left: 90%;
+}
+
+#move {
+  width: 100%;
+  height: 400px;
+  margin: 20px;
+  border: 2px solid;
+}
+
+#move img {
+  position: absolute;
+  left: 0;
+
+  animation: tigerMove 10s infinite;
+}
+
+@keyframes tigerMove {
+  0% {
+    left: 0;
+    transform: scaleX(-1);
+  }
+  50% {
+    left: 90%;
+  }
+  100% {
+    left: 0;
+  }
+}

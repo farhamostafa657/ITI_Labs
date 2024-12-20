@@ -1,0 +1,64 @@
+header {
+  background-color: aqua;
+  height: 50px;
+  text-align: center;
+}
+nav {
+  background-color: antiquewhite;
+  height: 50px;
+  text-align: center;
+}
+#sec_art {
+  float: left;
+
+  width: 75%;
+
+  text-align: center;
+}
+#sec_art section {
+  background-color: brown;
+  height: 50px;
+}
+#sec_art article {
+  background-color: rgb(72, 5, 68);
+  height: 50px;
+}
+aside {
+  float: right;
+  background-color: cadetblue;
+  width: 25%;
+  height: 100px;
+}
+footer {
+  background-color: aquamarine;
+  text-align: center;
+}
+time {
+  display: flex;
+  text-align: center;
+  text-shadow: 0dvh;
+  background-color: beige;
+  width: 100%;
+  height: 100px;
+}
+#star {
+  float: left;
+  background-color: black;
+}
+
+.star-container {
+  display: inline-block;
+}
+
+.star {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background-image: url("./Images/empty_star.png");
+  background-size: cover;
+  cursor: pointer;
+  display: inline-block;
+}
+.star.filled {
+  background-image: url("./Images/Filled_star.png"); /* Use the path to the filled star image */
+}

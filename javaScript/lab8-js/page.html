@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .usersData {
+        float: left;
+        width: 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <form action="">
+        <label for="fname">First name:</label><br />
+        <input type="text" id="fname" name="fname" /><br />
+        <label for="lname">Password:</label><br />
+        <input type="password" id="lname" name="pass" /><br /><br />
+        <br />
+        <input type="checkbox" name="check" id="remember" />
+        <label for="">remember me</label>
+        <br />
+        <br />
+        <br />
+        <button id="login" type="submit">Submit</button>
+      </form>
+    </div>
+    <div id="data"></div>
+    <br />
+    <br />
+    <br />
+    <input type="text" placeholder="Enter Your ID" id="myId" />
+    <button id="display">display</button>
+    <span id="spann"></span>
+
+    <br />
+    <div id="users" class="usersData"></div>
+    <br />
+
+    <div>
+      <label for="student">student Names</label>
+      <select
+        name="student"
+        id="student_select"
+        onchange="displayTheUser(this)"
+      ></select>
+      <span id="user_data" style="float: right"></span>
+    </div>
+    <br />
+
+    <script src="./script.js"></script>
+  </body>
+</html>

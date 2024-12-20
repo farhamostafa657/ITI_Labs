@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div>
+      <header>Header</header>
+      <nav>nav</nav>
+      <div id="sec_art">
+        <section>section</section>
+        <article>article</article>
+      </div>
+      <aside>Aside</aside>
+      <div style="clear: both"></div>
+      <footer>Footer</footer>
+    </div>
+
+    <div>
+      <time datetime="2024-12-25T10:00">25-12-2024,at 10:00</time>
+    </div>
+    <div>
+      <meter value="20" min="0" max="50" low="10" high="100">20</meter>
+    </div>
+    <div>
+      <progress value="50" max="100"></progress>
+    </div>
+    <div>
+      <mark>Deadline</mark>
+    </div>
+    <br />
+    <br />
+    <br />
+    <label for="">Image Rating Star</label>
+    <div id="star" class="star-container">
+      <img
+        class="stars"
+        src="./Images/empty_star.png"
+        alt=""
+        data-clicked="false"
+        data-index="0"
+      />
+      <img
+        class="stars"
+        src="./Images/empty_star.png"
+        alt=""
+        data-clicked="false"
+        data-index="1"
+      />
+      <img
+        class="stars"
+        src="./Images/empty_star.png"
+        alt=""
+        data-clicked="false"
+        data-index="2"
+      />
+      <img
+        class="stars"
+        src="./Images/empty_star.png"
+        alt=""
+        data-clicked="false"
+        data-index="3"
+      />
+      <img
+        class="stars"
+        src="./Images/empty_star.png"
+        alt=""
+        data-clicked="false"
+        data-index="4"
+      />
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <div style="clear: both">
+      <video src="https://www.youtube.com/watch?v=YrgR2o2teno" controls></video>
+      <br />
+      <label for="">Sample adio</label>
+      <br />
+      <audio src="" controls></audio>
+    </div>
+
+    <div id="drag_drop">
+      <div
+        ondrop="dropEle(this)"
+        style="width: 25%; height: 200px; border: 2px solid"
+        ondragover="event.preventDefault();"
+      ></div>
+      <img
+        draggable="true"
+        src="./Images/empty_star.png"
+        data-buy="0"
+        width="50px"
+        height="50px"
+        ondragstart="dragImg(this)"
+      />
+      <img
+        src="./Images/empty_star.png"
+        data-buy="0"
+        width="50px"
+        height="50px"
+        ondragstart="dragImg(this)"
+      />
+      <img
+        src="./Images/empty_star.png"
+        data-buy="0"
+        width="50px"
+        height="50px"
+        ondragstart="dragImg(this)"
+      />
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

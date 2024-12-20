@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+#card_style {
+  background-color: antiquewhite;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card {
+  float: left;
+  width: 25%;
+  margin: 10px;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+#rating {
+  float: right;
+}
+#price {
+  float: left;
+}
+#cardButton {
+  width: 100%;
+  background-color: green;
+  text-decoration: solid;
+  height: 40px;
+  color: white;
+  border-radius: 5px;
+}
+
+#image {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+}
+#desc {
+  text-align: center;
+}
+
+#title {
+  text-align: center;
+  height: 50px;
+}
+#shopping {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  float: right;
+  text-align: center;
+  background-color: antiquewhite;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+}

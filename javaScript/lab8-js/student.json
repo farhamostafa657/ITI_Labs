@@ -1,0 +1,42 @@
+[
+  {
+    "student": {
+      "id": 1,
+      "name": "farha",
+      "age": 24,
+      "address": "october",
+      "skills": ["one", "two", "three"],
+      "isLeader": true
+    }
+  },
+  {
+    "student": {
+      "id": 2,
+      "name": "mostaf",
+      "age": 54,
+      "address": "october",
+      "skills": ["one", "two", "three"],
+      "isLeader": true
+    }
+  },
+  {
+    "student": {
+      "id": 3,
+      "name": "abdeltawab",
+      "age": 34,
+      "address": "october",
+      "skills": ["one", "two", "three"],
+      "isLeader": true
+    }
+  },
+  {
+    "student": {
+      "id": 4,
+      "name": "abdo",
+      "age": 22,
+      "address": "october",
+      "skills": ["one", "two", "three"],
+      "isLeader": true
+    }
+  }
+]
