@@ -26,10 +26,10 @@ function addNote() {
   var title_value = title_data.value;
   var dec_value = desc_data.value;
   var post = new XMLHttpRequest();
-  post.open("POST", `http://localhost:8000/notes`);
+  post.open("POST", `http://localhost:3000/notes`);
   post.setRequestHeader("Content-Type", "application/json");
-  console.log(title_data);
-  console.log(desc_data);
+  console.log(title_value);
+  console.log(dec_value);
   if (title_value.length <= 5 && dec_value.length >= 20) {
     document.getElementById("title").nextElementSibling.innerHTML =
       "Title must be more than 6 charachter";
@@ -43,7 +43,7 @@ function addNote() {
       "description must be more than 20 charachter";
   } else {
     let data = JSON.stringify({
-      id: Number(localStorage.getItem("id")) + 1,
+      id: Number(localStorage.getItem("id")) + 1 + "",
       title: title_value,
       description: dec_value,
     });
@@ -80,9 +80,12 @@ function editNote(id) {
 }
 
 function upData() {
-  var upId = Number(localStorage.getItem("id"));
+  var upId = localStorage.getItem("id");
   var upXhr = new XMLHttpRequest();
   upXhr.open("PUT", `http://localhost:3000/notes/${upId}`);
+  /////////////////////////////////////
+  //////////////////////////////////
+
   upXhr.setRequestHeader("Content-Type", "application/json");
   var upTitle = document.getElementById("uptitle").value;
   var upDesc = document.getElementById("upDesc").value;
@@ -100,7 +103,7 @@ function upData() {
       "description must be more than 20 charachter";
   } else {
     var upDataJson = JSON.stringify({
-      id: upId,
+      id: upId + "",
       title: upTitle,
       description: upDesc,
     });
