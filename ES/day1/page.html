@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Users</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      #user-details {
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fetch Users and Display Details</h1>
+    <select id="user-select">
+      <option value="">Select a user</option>
+    </select>
+    <button id="show-details" disabled>Show Image</button>
+    <div id="user-details"></div>
+
+    <!-- post -->
+
+    <form action="#" id="form">
+      <label for="title">title</label>
+      <input type="text" id="title" />
+      <br />
+      <br />
+      <label for="body">Body</label>
+      <textarea name="" id="body"></textarea>
+      <br />
+      <br />
+      <button type="submit">Submet</button>
+    </form>
+
+    <div id="post"></div>
+
+    <!-- promise  -->
+    <h1>display promise</h1>
+    <div id="content"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
