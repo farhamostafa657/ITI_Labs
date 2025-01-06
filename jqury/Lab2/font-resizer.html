@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Font Resizer</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        text-align: center; /* Ensure elements are centered within their container */
+      }
+
+      .container {
+        text-align: center; /* Center elements within this container */
+      }
+
+      p.content {
+        font-size: 20px;
+        margin-bottom: 20px; /* Space between paragraph and buttons */
+      }
+
+      button {
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: 16px;
+      }
+
+      #theError {
+        color: red;
+        font-size: 16px;
+        margin-top: 10px; /* Space for error messages below buttons */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p class="content">Hello, Open Sourcians</p>
+      <div id="theError"></div>
+      <button id="decrease">-</button>
+      <button id="increase">+</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="jqueryUi/jquery-ui.min.js"></script>
+    <script src="font.js"></script>
+  </body>
+</html>
