@@ -1,135 +1,94 @@
-////////////////////////////////////////////
-//fetching data from API
-//1
+// 1.	Try arrow function:
+// a.	With Array.filter() function, to return the odd numbers from an array.
 
-const userSelect = document.getElementById("user-select");
-const showDetailsButton = document.getElementById("show-details");
-const userDetailsDiv = document.getElementById("user-details");
+let arr = [1, 2, 3, 4, 5, 6, 6, 7, 8, 9, 10, 11];
+let oddNumbers = arr.filter((num) => num % 2 != 0);
+console.log(oddNumbers);
 
-async function fetchUsers() {
-  try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/users");
-    const users = await response.json();
-    users.forEach((user) => {
-      const option = document.createElement("option");
-      option.value = user.id;
-      option.textContent = user.name;
-      userSelect.appendChild(option);
-    });
-    showDetailsButton.disabled = false;
-  } catch (error) {
-    console.error("Error fetching users:", error);
-  }
-}
-async function displayUserDetails(userId) {
-  try {
-    const response = await fetch(
-      `https://jsonplaceholder.typicode.com/users/${userId}`
-    );
-    const user = await response.json();
+// b.	With array.forech() to print the even values.
 
-    userDetailsDiv.innerHTML = `
-      <h3>${user.name}</h3>
-      <p><strong>Email:</strong> ${user.email}</p>
-      <p><strong>Phone:</strong> ${user.phone}</p>
-      <p><strong>Website:</strong> <a href="http://${user.website}" target="_blank">${user.website}</a></p>
-      <p><strong>Address:</strong> ${user.address.street}, ${user.address.city}</p>
-      <p><strong>Company:</strong> ${user.company.name}</p>
-    `;
-  } catch (error) {
-    console.error("Error fetching user details:", error);
-  }
-}
-
-userSelect.addEventListener("change", () => {
-  showDetailsButton.disabled = userSelect.value === "";
+var evenNum = arr.forEach((num) => {
+  if (num % 2 == 0) console.log(num);
 });
 
-showDetailsButton.addEventListener("click", () => {
-  const userId = userSelect.value;
-  if (userId) {
-    displayUserDetails(userId);
+// c.	With array.map() to print the square of each element.
+console.log("**********************");
+arr.map((num) => console.log(num * 2));
+
+// 2.	Create a Vehicle Base Class and Car Subclass
+
+class Vehicle {
+  constructor(brand, year) {
+    this.brand = brand; // Manufacturer of the vehicle
+
+    this.year = year; // Year of manufacture
   }
-});
 
-fetchUsers();
+  getDetails() {
+    return `Year: ${this.year} Brand : ${this.brand}`;
+  }
+}
+class Car extends Vehicle {
+  constructor(brand, year, model) {
+    super(brand, year);
+    this.model = model;
+  }
 
-//////////////////////////////////////////////////////////////////////////////////
-
-//add post
-//2
-const form = document.getElementById("form");
-const inputTitle = document.getElementById("title");
-const inputBody = document.getElementById("body");
-const postsDiv = document.getElementById("post");
-
-async function fetchPosts(post) {
-  try {
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(post),
-    });
-
-    const data = await response.json();
-
-    postsDiv.innerHTML = `
-    <p><strong>ID:</strong> ${data.id}</p>
-    <p><strong>Title:</strong> ${data.title}</p>
-    <p><strong>Body:</strong> ${data.body}</p>
-    <p><strong>User ID:</strong> ${data.userId}</p>
-  `;
-  } catch (error) {
-    console.error("Error adding post:", error);
+  getDetails() {
+    return `Year: ${this.year} Brand : ${this.brand} model : ${this.model}`;
   }
 }
 
-form.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const newPost = {
-    title: inputTitle.value,
-    body: inputBody.value,
-    userId: 1,
-  };
-  fetchPosts(newPost);
-  inputTitle.value = "";
-  inputTitle.value = "";
-});
+let myCar = new Car("Toyota", 2023, "Corolla");
+console.log(myCar.getDetails());
 
-/////////////////////////////////////////
-//3
+// 3.	Make a set that holds student names.
+// a.	Try to add repeated names, will the set accept it?
+// b.	Print the set values using spread operator and using for…of.
 
-///////////////////////////////////////////////
-//4
+let studentsName = new Set();
+studentsName.add("farha");
+studentsName.add("mostafa");
+studentsName.add("abdeltawab");
+studentsName.add("moftah");
 
-const tip = [
-  "tip 1",
-  "tip 2",
-  "tip 3",
-  "tip 4",
-  "tip 5",
-  "tip 6",
-  "tip 7",
-  "tip 8",
-  "tip 9",
-  "tip 10",
-];
+console.log(...studentsName);
 
-function* getTip() {
-  let index = 0;
-  while (index < tip.length) {
-    yield tip[index];
-    index++;
-  }
+for (const element of studentsName) {
+  console.log(element);
 }
 
-console.log(getTip().next());
-console.log(getTip().next());
-console.log(getTip().next());
-console.log(getTip().next());
-console.log(getTip().next());
-console.log(getTip().next());
-console.log(getTip().next());
-console.log(getTip().next());
+// 4.	Make a Map that contains the student name as a key,
+//  and object that contains an array of his studied
+// courses and his grade in each course. (The object structure as
+// following: {Grades:[
+//     {Coursename:”JavaScript”, Grade:”Excellent”},
+//     {Coursename:”Jquery”, Grade:”Good”},
+//     {Coursename:”CSS”, Grade:”V.Good”}]}
+//     a.	Loop in the Map and display each student along with his grades in all courses.
+//     b.	Make a dropdownlist and fill it with the student names (from the Map), and when the user selects specific student display his grades in all courses.
+
+let studentDate = new Map();
+studentDate.set("farha", {
+  grades: [
+    { Coursename: "”JavaScript”", Grade: "”Excellent”" },
+    { Coursename: "”Jquery”", Grade: "”Good”" },
+    { Coursename: "”CSS”", Grade: "Good" },
+  ],
+});
+
+studentDate.set("mostfa", {
+  grades: [
+    { Coursename: "”JavaScript”", Grade: "”Excellent”" },
+    { Coursename: "”Jquery”", Grade: "”Good”" },
+    { Coursename: "”CSS”", Grade: "Good" },
+  ],
+});
+
+for (const [key, value] of studentDate) {
+  console.log(key);
+  value.grades.forEach(({ Coursename, Grade }) =>
+    console.log(`  Course: ${Coursename}, Grade: ${Grade}`)
+  );
+  console.log("");
+}
