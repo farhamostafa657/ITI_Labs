@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&family=Playwrite+IN:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.aboutMe {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  font-size: 3rem;
+  font-family: "Lexend Giga", sans-serif;
+}
+
+.desc {
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: left;
+}
